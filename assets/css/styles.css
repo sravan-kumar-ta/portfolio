@@ -703,7 +703,7 @@ body.dark-theme {
     z-index: -1;
     background: rgba(26, 26, 26, 0.9) none repeat scroll 0 0;
     opacity: 0.75;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"
+    /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)" */
 }
 
 .quote-section h2, q {
@@ -842,7 +842,8 @@ body.dark-theme {
   display: flex;
   align-items: center;
   column-gap: .25rem;
-  color: var(--text-color);
+  /* color: var(--text-color); */
+  color: rgb(0, 13, 255);
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
   transition: color .4s;
@@ -857,6 +858,21 @@ body.dark-theme {
 .projects__link:hover,
 .projects__link:hover i {
   color: var(--first-color);
+}
+
+.projects__link::after {
+  content: '';
+  width: 0;
+  height: 1.5px;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 1.5rem;
+  bottom: 2rem;
+  transition: width .3s;
+}
+
+.projects__link:hover::after {
+  width: 6rem;
 }
 
 .projects__card:hover {
@@ -1109,7 +1125,6 @@ body.dark-theme {
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
-  border-radius: .5rem;
   background-color: hsl(0, 0%, 65%);
 }
 
