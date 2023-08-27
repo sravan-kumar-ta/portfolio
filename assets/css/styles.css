@@ -68,10 +68,14 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background-color .4s; /* For dark mode */
+  transition: background-color .4s;
+  /* For dark mode */
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-bold);
 }
@@ -125,7 +129,7 @@ body.dark-theme {
 }
 
 .dark-theme .section__title-1::after,
-.dark-theme .section__title-2::after{
+.dark-theme .section__title-2::after {
   background-color: hsla(14, 98%, 50%, .2);
 }
 
@@ -135,8 +139,8 @@ body.dark-theme {
 
 .dark-theme .home__description b {
   background: linear-gradient(90deg,
-              hsla(139, 100%, 50%, 0.503),
-              hsla(14, 80%, 50%, 0));
+      hsla(139, 100%, 50%, 0.503),
+      hsla(14, 80%, 50%, 0));
 }
 
 .dark-theme :is(.button__ghost, .services__icon i) {
@@ -185,7 +189,7 @@ body.dark-theme {
   padding-block: 4rem 2rem;
 }
 
-.section__title-1, 
+.section__title-1,
 .section__title-2 {
   position: relative;
   font-size: var(--h1-font-size);
@@ -193,13 +197,13 @@ body.dark-theme {
   margin: .75rem auto 2rem;
 }
 
-.section__title-1 span, 
+.section__title-1 span,
 .section__title-2 span {
   z-index: 5;
   position: relative;
 }
 
-.section__title-1::after, 
+.section__title-1::after,
 .section__title-2::after {
   content: "";
   width: 40px;
@@ -234,7 +238,8 @@ body.dark-theme {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden;
+  /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -527,10 +532,12 @@ body.dark-theme {
     transform: translateY(-1rem);
     opacity: 0;
   }
+
   50% {
     transform: translateY(0);
     opacity: 1;
   }
+
   100% {
     transform: translateY(.6rem);
     opacity: 0;
@@ -581,7 +588,7 @@ body.dark-theme {
   background-color: #0073b1c3;
   color: var(--white-color);
 }
- 
+
 /*=============== ABOUT ===============*/
 .about {
   background-color: var(--container-color);
@@ -676,6 +683,35 @@ body.dark-theme {
   justify-content: center;
   align-items: center;
   column-gap: 1rem;
+}
+
+/*=============== Quote ===============*/
+.quote-section {
+  background: url(../img/qt-bg.jpeg) no-repeat fixed 0 0/cover;
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+}
+
+.quote-section::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: rgba(26, 26, 26, 0.9) none repeat scroll 0 0;
+    opacity: 0.75;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"
+}
+
+.quote-section h2, q {
+  color: var(--white-color);
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 3px;
+  font-size: 30px;
+  text-align: center;
 }
 
 /*=============== SERVICES ===============*/
@@ -969,8 +1005,8 @@ body.dark-theme {
 }
 
 /* Move label up & sticky label */
-.contact__input:focus + .contact__label,
-.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label {
+.contact__input:focus+.contact__label,
+.contact__input:not(:placeholder-shown).contact__input:not(:focus)+.contact__label {
   opacity: 1;
   top: -16px;
 }
@@ -1016,7 +1052,7 @@ body.dark-theme {
   background-color: var(--black-color-light);
   padding: 6px;
   color: var(--white-color);
-  font-size: 1.25rem; 
+  font-size: 1.25rem;
   display: grid;
   place-items: center;
   transition: background-color .3s;
@@ -1111,7 +1147,7 @@ body.dark-theme {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 340px){
+@media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
   }
@@ -1140,6 +1176,7 @@ body.dark-theme {
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
+
   .home__container,
   .about__container,
   .projects__container {
@@ -1206,7 +1243,7 @@ body.dark-theme {
 
   .section__title-1::after,
   .section__title-2::after {
-    width: 70px ;
+    width: 70px;
     height: 48px;
   }
 
