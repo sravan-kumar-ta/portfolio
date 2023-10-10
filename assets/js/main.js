@@ -46,7 +46,7 @@ const sendEmail = (e) => {
     e.preventDefault()
     
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm('', '', '', '')
+    emailjs.sendForm('service_e2q8q0i', 'template_hpmuttm', '#contact-form', 'f5S2FiVHJz9hFnPe4')
     .then(() => {
         // Show sent message
         contactMessage.textContent = 'Message sent successfully ✅'
