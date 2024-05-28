@@ -838,7 +838,7 @@ body.dark-theme {
   column-gap: 1rem;
 }
 
-.projects__link {
+.projects__link, .live__link {
   display: flex;
   align-items: center;
   column-gap: .25rem;
@@ -849,14 +849,16 @@ body.dark-theme {
   transition: color .4s;
 }
 
-.projects__link i {
+.projects__link i, .live__link i {
   font-size: 1rem;
   color: var(--title-color);
   transition: color .4s;
 }
 
 .projects__link:hover,
-.projects__link:hover i {
+.projects__link:hover i,
+.live__link:hover,
+.live__link:hover i {
   color: var(--first-color);
 }
 
@@ -873,6 +875,21 @@ body.dark-theme {
 
 .projects__link:hover::after {
   width: 6rem;
+}
+
+.live__link::after {
+  content: '';
+  width: 0;
+  height: 1.5px;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 8.7rem;
+  bottom: 2rem;
+  transition: width .3s;
+}
+
+.live__link:hover::after {
+  width: 4.7rem;
 }
 
 .projects__card:hover {
